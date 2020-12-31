@@ -35,10 +35,46 @@ jobs:
     - name: SSH and deploy node app
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        port: ${{ secrets.SSH_PORT }}
+        host: 134.122.1.226
+        username: morsoferian
+        key: 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
+AgMEBQ==
+        port: 7000
         script: |
           cd ~/twelve-factor-app
           git pull origin master
