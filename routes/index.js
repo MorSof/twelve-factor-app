@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   return res.send("Hello World");
 });
 
+/* GET home page. */
+router.get('/test', function(req, res, next) {
+  return res.send("Success!");
+});
+
 module.exports = router;
