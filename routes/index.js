@@ -3,12 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  return res.send("Hello Srul");
+  return res.send("Hello World");
 });
 
 /* GET home page. */
 router.get('/test', function(req, res, next) {
-  return res.send("Success!!!!!");
+  return res.send("Sruli!!!!!");
 });
 
 module.exports = router;
