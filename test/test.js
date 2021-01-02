@@ -11,6 +11,6 @@ app.use("/", router); //routes
 
 describe("GET /", () => {
     it("respond with Hello World", (done) => {
-        request(app).get("/").expect("Hello World From Afeka College!", done);
+        request(app).get("/").expect("Hello World From Afeka College yay!", done);
     })
 });
