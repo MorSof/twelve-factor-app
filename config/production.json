@@ -1,0 +1,7 @@
+{
+  "port": 7000,
+  "mongo": {
+    "dbName": "woogie-feed",
+    "host": "mongodb+srv://mor:pd7731hkv80@cluster0.wcwdh.mongodb.net/woogie-feed"
+  }
+}

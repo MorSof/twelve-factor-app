@@ -1,0 +1,7 @@
+{
+    "port": 7000,
+    "mongo": {
+        "dbName": "woogie-feed",
+        "host": "mongodb://localhost/woogie-feed"
+    }
+}
