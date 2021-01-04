@@ -2,6 +2,6 @@
   "port": 6000,
   "mongo": {
     "dbName": "twelveFactorApplication-prod",
-    "host": "mongodb+srv://twelve-factor-app:<YLTe55rnnbGyFhku>@cluster0.alobk.mongodb.net/<twelveFactorApplication-prod>?retryWrites=true&w=majority"
+    "host": "mongodb+srv://twelve-factor-app:YLTe55rnnbGyFhku@cluster0.alobk.mongodb.net/twelveFactorApplication-prod?retryWrites=true&w=majority"
   }
 }
