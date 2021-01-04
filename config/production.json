@@ -1,7 +1,7 @@
 {
-  "port": 7000,
+  "port": 6000,
   "mongo": {
-    "dbName": "woogie-feed",
-    "host": "mongodb+srv://mor:pd7731hkv80@cluster0.wcwdh.mongodb.net/woogie-feed"
+    "dbName": "twelveFactorApplication-prod",
+    "host": "mongodb+srv://twelve-factor-app:<YLTe55rnnbGyFhku>@cluster0.alobk.mongodb.net/<twelveFactorApplication-prod>?retryWrites=true&w=majority"
   }
 }

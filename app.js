@@ -1,6 +1,8 @@
 var createError = require('http-errors');
+const config = require('config');
 var express = require('express');
 var path = require('path');
+var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
@@ -18,6 +20,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
+mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
+    .catch(err => console.log('Could not connect to MongoDB...'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
