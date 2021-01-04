@@ -21,6 +21,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
+
+// connecting to database
 mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
     .catch(err => console.log('Could not connect to MongoDB...'));
