@@ -93,5 +93,4 @@ async function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
   await adminModule.createAllTables();
-  //await app.main();
 }
