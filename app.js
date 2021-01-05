@@ -46,8 +46,6 @@ async function main () {
           // .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
           // .catch(err => console.log('Could not connect to MongoDB...',err));
 
-  mongoose.set('bufferCommands', false);
-
 }
 
 app.main = main;
