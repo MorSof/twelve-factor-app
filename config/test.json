@@ -3,5 +3,12 @@
   "mongo": {
     "dbName": "woogie-feed",
     "host": "mongodb://localhost/woogie-feed"
+  },
+  "pg": {
+    "user": "postgres",
+    "password": "postgres",
+    "dbName": "cloud-computing",
+    "host": "localhost",
+    "port": 5432
   }
 }

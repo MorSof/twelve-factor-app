@@ -3,5 +3,12 @@
   "mongo": {
     "dbName": "cloud-computing-prod",
     "host": "mongodb://morsoferian:jCzMzrb0EPd0hYchFB96KwtCZkwlJvexcK3W5Qni@cluster0-shard-00-00.fwwhk.mongodb.net:27017,cluster0-shard-00-01.fwwhk.mongodb.net:27017,cluster0-shard-00-02.fwwhk.mongodb.net:27017/cloud-computing?ssl=true&replicaSet=atlas-izyp7n-shard-0&authSource=admin&retryWrites=true&w=majority"
+  },
+  "pg": {
+    "user": "postgres",
+    "password": "jCzMzrb0EPd0hYchFB96KwtCZkwlJvexcK3W5Qni",
+    "dbName": "cloud-computing",
+    "host": "35.202.192.26",
+    "port": 5432
   }
 }
