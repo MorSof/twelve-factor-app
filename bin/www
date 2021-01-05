@@ -1,4 +1,5 @@
 const config = require('config');
+const adminModule = require("../admin");
 
 /**
  * Module dependencies.
@@ -91,5 +92,6 @@ async function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  await app.main();
+  await adminModule.createAllTables();
+  //await app.main();
 }
