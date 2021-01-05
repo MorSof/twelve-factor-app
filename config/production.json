@@ -2,6 +2,6 @@
   "port": 7000,
   "mongo": {
     "dbName": "cloud-computing-prod",
-    "host": "mongodb+srv://morsoferian:jCzMzrb0EPd0hYchFB96KwtCZkwlJvexcK3W5Qni@cluster0.fwwhk.mongodb.net/cloud-computing"
+    "host": "mongodb+srv://morsoferian:jCzMzrb0EPd0hYchFB96KwtCZkwlJvexcK3W5Qni@cluster0.fwwhk.mongodb.net/cloud-computing?authSource=admin&compressors=zlib&retryWrites=true&w=majority&ssl=true"
   }
 }
