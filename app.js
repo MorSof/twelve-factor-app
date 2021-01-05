@@ -41,7 +41,10 @@ app.use(function(err, req, res, next) {
 
 async function main () {
   // Connecting to database
-  await mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true});
+  await mongoose.connect(config.get('mongo').host, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 100000});
   console.log('Connected to MongoDB ' + config.get('mongo').dbName);
           // .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
           // .catch(err => console.log('Could not connect to MongoDB...',err));
