@@ -1,7 +1,7 @@
 {
   "port": 7000,
   "mongo": {
-    "dbName": "twelveFactorApplication-prod",
-    "host": "mongodb+srv://twelve-factor-app:YLTe55rnnbGyFhku@cluster0.alobk.mongodb.net/twelveFactorApplication-prod?retryWrites=true&w=majority"
+    "dbName": "cloud-computing-prod",
+    "host": "mongodb+srv://morsoferian:jCzMzrb0EPd0hYchFB96KwtCZkwlJvexcK3W5Qni@cluster0.fwwhk.mongodb.net/cloud-computing?retryWrites=true&w=majority"
   }
 }

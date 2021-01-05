@@ -5,7 +5,7 @@ const tempSchema = new mongoose.Schema({
     message: String
 });
 
-const TempFileData = new mongoose.model('Temp', tempSchema);
+const TempFileData = new mongoose.model('messages', tempSchema);
 
 module.exports = {
     TempFileData:TempFileData
