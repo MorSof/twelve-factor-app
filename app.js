@@ -21,10 +21,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 
-// Connecting to database
-mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true})
-    .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
-    .catch(err => console.log('Could not connect to MongoDB...',err));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -41,5 +37,14 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+async function main () {
+  // Connecting to database
+  await mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true})
+          .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
+          .catch(err => console.log('Could not connect to MongoDB...',err));
+}
+
+app.main = main;
 
 module.exports = app;
