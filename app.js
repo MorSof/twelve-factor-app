@@ -2,7 +2,7 @@ var createError = require('http-errors');
 const config = require('config');
 var express = require('express');
 var path = require('path');
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
@@ -39,18 +39,15 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-async function main () {
-  // Connecting to database
-  await mongoose.connect(config.get('mongo').host, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-  console.log('Connected to MongoDB ' + config.get('mongo').dbName);
-          // .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
-          // .catch(err => console.log('Could not connect to MongoDB...',err));
-
-}
-
-app.main = main;
+// async function main () {
+//   // Connecting to database
+//   await mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true});
+//   console.log('Connected to MongoDB ' + config.get('mongo').dbName);
+//           // .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
+//           // .catch(err => console.log('Could not connect to MongoDB...',err));
+//
+// }
+//
+// app.main = main;
 
 module.exports = app;
