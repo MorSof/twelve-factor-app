@@ -24,7 +24,7 @@ app.use('/', indexRouter);
 // Connecting to database
 mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
-    .catch(err => console.log('Could not connect to MongoDB...'));
+    .catch(err => console.log('Could not connect to MongoDB...',err));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
