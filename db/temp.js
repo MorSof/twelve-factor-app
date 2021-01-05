@@ -6,7 +6,6 @@ const tempSchema = new mongoose.Schema({
     message: String
 }, {
     capped: { size: 1024 },
-    bufferCommands: false,
     autoCreate: false // disable `autoCreate` since `bufferCommands` is false
 });
 

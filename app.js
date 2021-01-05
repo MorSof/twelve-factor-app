@@ -8,6 +8,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var app = express();
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -43,6 +44,9 @@ async function main () {
   await mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true})
           .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
           .catch(err => console.log('Could not connect to MongoDB...',err));
+
+  mongoose.set('bufferCommands', false);
+
 }
 
 app.main = main;
