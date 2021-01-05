@@ -41,9 +41,10 @@ app.use(function(err, req, res, next) {
 
 async function main () {
   // Connecting to database
-  await mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true})
-          .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
-          .catch(err => console.log('Could not connect to MongoDB...',err));
+  await mongoose.connect(config.get('mongo').host, {useNewUrlParser: true, useUnifiedTopology: true});
+  console.log('Connected to MongoDB ' + config.get('mongo').dbName);
+          // .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
+          // .catch(err => console.log('Could not connect to MongoDB...',err));
 
   mongoose.set('bufferCommands', false);
 
