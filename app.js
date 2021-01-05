@@ -44,7 +44,10 @@ async function main () {
   await mongoose.connect(config.get('mongo').host, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 100000});
+    serverSelectionTimeoutMS: 100000,
+    bufferMaxEntries : 0,
+    bufferCommands: false
+  });
   console.log('Connected to MongoDB ' + config.get('mongo').dbName);
           // .then(() => console.log('Connected to MongoDB ' + config.get('mongo').dbName))
           // .catch(err => console.log('Could not connect to MongoDB...',err));
