@@ -2,11 +2,11 @@ const config = require('config');
 const Pool = require("pg").Pool
 
 const pool = new Pool({
-    user: config.get('pg.user'),
-    password: config.get('pg.password'),
-    database: config.get('pg.dbName'),
-    host: config.get('pg.host'),
-    port: config.get('pg.port')
+    user: "postgres",
+    password: "jCzMzrb0EPd0hYchFB96KwtCZkwlJvexcK3W5Qni",
+    database: "cloud-computing",
+    host: "cloud-computing-300816:us-central1:myinstance",
+    port: 5432
 })
 
 module.exports = pool;
