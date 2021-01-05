@@ -13,7 +13,7 @@ router.get('/tempFiles', async function(req, res, next) {
 });
 
 /* POST new temp file. */
-router.post('/', async function(req, res, next) {
+router.post('/', async (req, res, next) => {
   await tempFilesService.addNewTempFile(req, res);
 });
 
