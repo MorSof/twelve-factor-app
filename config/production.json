@@ -8,7 +8,7 @@
     "user": "postgres",
     "password": "jCzMzrb0EPd0hYchFB96KwtCZkwlJvexcK3W5Qni",
     "dbName": "cloud-computing",
-    "host": "cloud-computing-300816:us-central1:myinstance",
+    "host": "35.202.192.26",
     "port": 5432
   }
 }
