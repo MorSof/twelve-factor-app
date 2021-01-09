@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const service = require("../services/dbService")
 
 /* GET home page. */
@@ -13,7 +13,7 @@ router.get('/messages', async (req, res) => {
   res.json(db_res);
 });//
 
-/* POST new temp file. */
+/* POST new message. */
 router.post('/', async (req, res) => {
     try {
         const db_res = await service.addMessage(req)
