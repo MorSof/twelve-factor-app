@@ -1,5 +1,5 @@
 const config = require('config');
-const adminModule = require("../admin");
+const adminModule = require("../db/admin-db/admin-db");
 
 /**
  * Module dependencies.
@@ -92,5 +92,23 @@ async function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  await adminModule.createAllTables();
+  if (process.env.NODE_ENV !== "production"){
+    await adminModule.createAllTables();
+  }
 }
+
+const sigs = ['SIGINT', 'SIGTERM', 'SIGQUIT']
+sigs.forEach(sig => {
+  process.on(sig, () => {
+    server.close(function (err) { // Stops the server from accepting new connections and finishes existing connections.
+      console.log("Server closed");
+      if (process.env.NODE_ENV !== "production") {
+        adminModule.deleteAllTables().then((res) => { // close your database connection and exit with success
+          console.log(res);
+          process.exit(0);
+        });
+      }
+      process.exit(0);
+    })
+  })
+})

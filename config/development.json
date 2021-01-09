@@ -1,9 +1,6 @@
 {
+    "env": "development",
     "port": 7000,
-    "mongo": {
-        "dbName": "cloud-computing-dev",
-        "host": "mongodb://localhost/cloud-computing"
-    },
     "pg": {
         "user": "postgres",
         "password": "postgres",

@@ -1,5 +1,5 @@
-const createTablesJson = require('./db/admin-db.json')
-const pool = require('./db/postgres');
+const createTablesJson = require("./admin-db.json")
+const pool = require('../postgres');
 
 deleteAllTables = async () => {
     try{
