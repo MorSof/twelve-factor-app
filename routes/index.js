@@ -10,7 +10,8 @@ router.get('/', function (req, res, next) {
 
 /* GET all messages. */
 router.get('/messages', async (req, res, next) => {
-    return await service.getAllMessages()
+  const db_res = await service.getAllMessages()
+  res.json(db_res);
 });
 
 /* POST new temp file. */
