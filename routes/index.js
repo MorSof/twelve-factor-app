@@ -9,8 +9,14 @@ router.get('/', function (req, res, next) {
 
 /* GET all messages. */
 router.get('/messages', async (req, res) => {
-    const db_res = await service.getAllMessages()
-    res.json(db_res);
+    try {
+        const db_res = await service.getAllMessages()
+        res.json(db_res);
+    } catch (err) {
+        console.error(err.message);
+        res.json(err.message);
+    }
+
 });//
 
 /* POST new message. */
@@ -26,7 +32,13 @@ router.post('/', async (req, res) => {
 
 /* DELETE all messages. */
 router.delete('/', async (req, res) => {
-    await service.deleteAllMessages()
+    try {
+        await service.deleteAllMessages();
+        res.send('All DB is deleted!')
+    } catch (err) {
+        console.error(err.message);
+        res.json(err.message);
+    }
 });//
 
 module.exports = router;

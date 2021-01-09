@@ -13,8 +13,8 @@ async function addMessage(req) {
 }
 
 async function deleteAllMessages() {
-    await pool.query(
-        "DELETE FROM messages)\n");
+    return (await pool.query(
+        "DELETE FROM messages)\n"));
 }
 
 module.exports = {
