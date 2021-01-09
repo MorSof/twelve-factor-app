@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
 router.delete('/', async (req, res) => {
     try {
         await service.deleteAllMessages();
-        res.send('All DB is deleted!')
+        res.send("All DB is deleted!");
     } catch (err) {
         console.error(err.message);
         res.json(err.message);
