@@ -43,4 +43,4 @@ jobs:
           cd ~/twelve-factor-app
           git pull origin master
           npm install --production
-          pm2 restart node-app
+          NODE_ENV=production pm2 restart node-app --update-env

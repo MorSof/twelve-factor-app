@@ -1,7 +1,14 @@
 {
     "port": 7000,
     "mongo": {
-        "dbName": "twelveFactorApplication-dev",
-        "host": "mongodb://localhost/twelveFactorApplication"
+        "dbName": "cloud-computing-dev",
+        "host": "mongodb://localhost/cloud-computing"
+    },
+    "pg": {
+        "user": "postgres",
+        "password": "postgres",
+        "dbName": "cloud-computing",
+        "host": "localhost",
+        "port": 5432
     }
 }
