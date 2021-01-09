@@ -37,7 +37,7 @@ jobs:
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        key: 5786143da53a1887f3822167c2
+        key: ${{ secrets.SSH_KEY }}
         debug: true
         script: |
           cd ~/twelve-factor-app
