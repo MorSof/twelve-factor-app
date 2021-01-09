@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const service = require("../services/dbService")
-const pool = require("../db/postgres");
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -9,13 +8,13 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET all messages. */
-router.get('/messages', async (req, res, next) => {
+router.get('/messages', async (req, res) => {
   const db_res = await service.getAllMessages()
   res.json(db_res);
 });
 
 /* POST new temp file. */
-router.post('/', async (req, res, next) => {
+router.post('/', async (req, res) => {
     try {
         const db_res = await service.addMessage(req)
         res.json(db_res);
