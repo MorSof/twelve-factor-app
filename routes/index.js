@@ -1,24 +1,27 @@
 var express = require('express');
 var router = express.Router();
-const pool = require("../db/postgres");
+const service = require("../services/dbService")
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  return res.send("Hello World From Afeka College yay!!!");
+router.get('/', function (req, res, next) {
+    return res.send("Hello World From Afeka College yay!!!");
 });
 
+/* GET all messages. */
+router.get('/messages', async (req, res) => {
+  const db_res = await service.getAllMessages()
+  res.json(db_res);
+});//
+
 /* POST new temp file. */
-router.post('/', async (req, res, next) => {
-  try {
-    const db_res = (await pool.query(
-        "INSERT INTO messages(name, message)\n" +
-        "VALUES ($1, $2)\n" +
-        "RETURNING *;\n", [req.body.name, req.body.message])).rows[0];
-    res.json(db_res);
-  }catch(err){
-    console.error(err.message);
-    res.json(err.message);
-  }
+router.post('/', async (req, res) => {
+    try {
+        const db_res = await service.addMessage(req)
+        res.json(db_res);
+    } catch (err) {
+        console.error(err.message);
+        res.json(err.message);
+    }
 });
 
 module.exports = router;
