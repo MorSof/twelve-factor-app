@@ -2,7 +2,7 @@ const pool = require("../db/postgres");
 
 async function getAllMessages() {
     return (await pool.query(
-        "SELECT * FROM messages\n")).rows[0];
+        "SELECT * FROM messages\n")).rows;
 }
 
 async function addMessage(req) {
