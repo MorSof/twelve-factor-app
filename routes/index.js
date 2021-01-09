@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
 router.get('/messages', async (req, res) => {
   const db_res = await service.getAllMessages()
   res.json(db_res);
-});
+});//
 
 /* POST new temp file. */
 router.post('/', async (req, res) => {
