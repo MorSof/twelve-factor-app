@@ -4,7 +4,7 @@ const service = require("../services/dbService")
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    return res.send("Hello World From Mor");
+    return res.send("There are any questions?");
 });
 
 //"There are any questions?"
