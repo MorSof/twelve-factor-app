@@ -4,7 +4,7 @@ const service = require("../services/dbService")
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    return res.send("Hello World From Afeka College yay!!!");
+    return res.send("Hello World From Afeka College yay!!");
 });
 
 /* GET all messages. */
