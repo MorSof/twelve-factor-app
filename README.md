@@ -1,7 +1,7 @@
 twelve-factor-app
 =================
 
-To create, build and run the project properly please follow this guid:
+To create, build and run the project properly on cloud with CI/CD pipeline please follow this guid:
 
 https://docs.google.com/document/d/1X7fVn49DiMnejaLNsVrbqNtXw8S-0IUyWKr7Cob6KRg/edit?usp=sharing
 
@@ -26,7 +26,7 @@ Run gradle build for building the project:
 
     npm start
 
-#test
+# test
 
     npm test
 
